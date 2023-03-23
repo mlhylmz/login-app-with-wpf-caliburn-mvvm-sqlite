@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root Type="DevExpress.CodeRush.Foundation.Markers.SolutionBookmarksContainer">
+  <Options Language="Neutral">
+    <Items>
+      <Item Id="{abfadde7-b846-451a-b6ea-4c632024d3a9}">
+        <Id>4</Id>
+        <File>WindowsManagerTest\Views\UserPageView.xaml</File>
+        <Line>52</Line>
+        <Character>9</Character>
+        <ViewportTopMax>40</ViewportTopMax>
+      </Item>
+    </Items>
+  </Options>
+</Root>

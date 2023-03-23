@@ -1,0 +1,53 @@
+﻿<Window x:Class="LoginApp.Views.UserPageView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Background="White"
+        Title="User Description" Height="400" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="1"
+                Width="auto" Height="25" HorizontalAlignment="Right"
+                Content=" Logout " x:Name="UserLogoutButton"
+                Background="#00adff" Foreground="White"
+                FontWeight="Light" BorderThickness="0" />
+
+        <ListView Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Items}"
+                  FontSize="25" FontWeight="Light">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <DockPanel>
+                            <Label Content="Nickname : " />
+                            <TextBlock Text="{Binding  NickName}" Margin="5" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label Content="Username : " />
+                            <TextBlock Text="{Binding  UserName}" Margin="5" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label Content="Surname : " />
+                            <TextBlock Text="{Binding  SurName}" Margin="5" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label Content="Age : " />
+                            <TextBlock Text="{Binding  Age}" Margin="5" />
+                        </DockPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <TextBox Text="{Binding ID}" />
+
+    </Grid>
+</Window>
